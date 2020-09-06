@@ -3,12 +3,12 @@ import React, { useState } from 'react'
 const SearchBar = ({ onSearchSubmit }) => {
     const [term, setTerm] = useState('')
 
-    const onInputChange = (event) => {
+    const onInputChange = event => {
         setTerm(event.target.value)
     }
     
-    const onFormSubmit = (e) => {
-        e.preventDefault()
+    const onFormSubmit = event => {
+        event.preventDefault()
         onSearchSubmit(term)
     }
 

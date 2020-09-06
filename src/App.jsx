@@ -11,7 +11,7 @@ const App = () => {
     const [selectedVideo, setSelectedVideo] = useState(null)
 
     useEffect(() => {
-        onTermSubmit('Nightcore')
+        onTermSubmit('tokyo ravens')
     }, [])
 
     const onTermSubmit = async term => {
@@ -25,13 +25,11 @@ const App = () => {
             }
         })
 
-        console.log(response.data.items)
         setVideos(response.data.items)
         setSelectedVideo(response.data.items[0])
     }
 
-    const onVideoSelect = (video) => {
-        console.log('From the App!', video)
+    const onVideoSelect = video => {
         setSelectedVideo(video)
     }
 
@@ -41,7 +39,7 @@ const App = () => {
             <div className="ui grid">
                 <div className="ui row">
                     <div className="eleven wide column">
-                        <VideoDetail video={selectedVideo} />
+                        <VideoDetail selectedVideo={selectedVideo} />
                     </div>
                     <div className="five wide column">
                         <VideoList videos={videos} onVideoSelect={onVideoSelect} />

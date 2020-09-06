@@ -2,7 +2,6 @@ import React from 'react'
 import './VideoItem.css'
 
 const VideoItem = ({ video, onVideoSelect }) => {
-    console.log(video.snippet.title)
     const videoTitle = video.snippet.title
     const image = video.snippet.thumbnails.medium.url
     

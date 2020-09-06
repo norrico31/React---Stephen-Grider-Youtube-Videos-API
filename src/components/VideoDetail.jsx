@@ -1,11 +1,11 @@
 import React from 'react'
 
-const VideoDetail = ({ video }) => {
-    if (!video) return <div>Loading...</div>
+const VideoDetail = ({ selectedVideo }) => {
+    if (!selectedVideo) return <div>Loading...</div>
 
-    const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`
-    const videoTitle = video.snippet.title
-    const videoDesc = video.snippet.description
+    const videoSrc = `https://www.youtube.com/embed/${selectedVideo.id.videoId}`
+    const videoTitle = selectedVideo.snippet.title
+    const videoDesc = selectedVideo.snippet.description
 
     return (
         <div>
