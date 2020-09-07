@@ -1,0 +1,9 @@
+Deployment in vercel
+
+In terminal
+npm i -g vercel
+vercel login
+vercel
+
+updating existing project with some changes / re-deploy
+vercel --prod
