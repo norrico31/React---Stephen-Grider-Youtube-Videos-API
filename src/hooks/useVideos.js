@@ -20,7 +20,6 @@ export default defaultSearchTerm => {
                 key: KEY
             }
         })
-
         setVideos(response.data.items)
     }
 
