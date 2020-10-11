@@ -3,7 +3,7 @@ import youtube from '../api/youtube'
 
 const KEY = 'AIzaSyDVfeUxsJzp8Vs0xnFGlhC2zrllcqbC4zc'
 
-export default defaultSearchTerm => {
+const useVideos = (defaultSearchTerm) => {
     const [videos, setVideos] = useState([])
 
     useEffect(() => {
@@ -25,3 +25,5 @@ export default defaultSearchTerm => {
 
     return [videos, search]
 }
+
+export default useVideos
